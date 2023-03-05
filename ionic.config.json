@@ -1,0 +1,7 @@
+{
+  "name": "coutea",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
