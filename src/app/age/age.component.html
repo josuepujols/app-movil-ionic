@@ -1,0 +1,32 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Age</ion-card-title>
+    <ion-card-subtitle>Ingrese su nombre</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-input [(ngModel)]="name" style="border: 1px solid rgb(73, 13, 227);"></ion-input>
+    <button (click)="GuessAge()" type="button" style="background-color: #002c3E; width: 10%; padding: 15px; border-radius: 200px; margin-top: 15px; margin-bottom: 50px;">
+      Enviar
+    </button>
+    <ion-text *ngIf="response.age >= 1 && response.age <= 18">
+      <h2>Esta persona es un joven.</h2>
+      <h3>Edad: {{response.age}}</h3>
+      <img src="../../assets/joven.png" alt="joven" width="300px" height="300px" style="margin-top: 35px;">
+    </ion-text>
+    <ion-text *ngIf="response.age > 18 && response.age <= 59">
+      <h2>Esta persona es un adulto.</h2>
+      <h3>Edad: {{response.age}}</h3>
+      <img src="../../assets/adulto.png" alt="joven" width="250px" height="250px" style="margin-top: 35px;">
+    </ion-text>
+    <ion-text *ngIf="response.age > 59 && response.age <= 130">
+      <h2>Esta persona es un anciano.</h2>
+      <h3>Edad: {{response.age}}</h3>
+      <img src="../../assets/anciano.png" alt="joven" width="250px" height="250px" style="margin-top: 35px;">
+    </ion-text>
+    <ion-text *ngIf="response.age > 130">
+      <h2>El numero es muy grande.</h2>
+      <h3>Edad: {{response.age}}</h3>
+    </ion-text>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,19 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Gender</ion-card-title>
+    <ion-card-subtitle>Ingrese su nombre</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-input [(ngModel)]="name" style="border: 1px solid rgb(73, 13, 227);"></ion-input>
+    <button (click)="IsMaleOrFemale()" type="button" style="background-color: #002c3E; width: 10%; padding: 15px; border-radius: 200px; margin-top: 15px; margin-bottom: 50px;">
+      Enviar
+    </button>
+    <ion-text *ngIf="response.gender === 'male'" color="secondary">
+      <h2>Este nombre pertenece a un hombre.</h2>
+    </ion-text>
+    <ion-text *ngIf="response.gender === 'female'" style="color: pink;">
+      <h2>Este nombre pertenece a una mujer.</h2>
+    </ion-text>
+  </ion-card-content>
+</ion-card>

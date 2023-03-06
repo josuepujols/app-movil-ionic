@@ -1,0 +1,20 @@
+<ion-card style="margin-top: 200px;">
+  <ion-card-header>
+    <ion-card-title>University</ion-card-title>
+    <ion-card-subtitle>Ingrese el nombre de un pais</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-input [(ngModel)]="country" style="border: 1px solid rgb(73, 13, 227);"></ion-input>
+    <button (click)="GetUniversities()" type="button" style="background-color: #002c3E; width: 10%; padding: 15px; border-radius: 200px; margin-top: 15px; margin-bottom: 50px;">
+      Enviar
+    </button>
+    <ion-card *ngIf="universities.length > 0" style="margin-top: 400px; display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;">
+      <div *ngFor="let item of universities" style="width: 30%; height: 100px; border: 1px solid gray; margin: 10px; padding: 10px;">
+        <h2><span style="font-weight: bold;">Universidad:</span> {{item.name}}</h2>
+        <h3><span style="font-weight: bold;">Sitio web:</span> <a target="_blank" href="{{item.web_pages[0]}}">{{item.web_pages[0]}}</a></h3>
+        <h3><span style="font-weight: bold;">Dominio:</span> <a target="_blank" href="{{item.domains[0]}}">{{item.web_pages[0]}}</a></h3>
+      </div>
+    </ion-card>
+  </ion-card-content>
+</ion-card>

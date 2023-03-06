@@ -15,7 +15,35 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div *ngIf="folder === 'Home'">
+      <img src="../../assets/tool-box.png" alt="" style="border-radius: 999px;" width="400px" height="400px">
+      <h1>Coutea</h1>
+    </div>
+    <div *ngIf="folder === 'Gender'">
+      <app-gender></app-gender>
+    </div>
+    <div *ngIf="folder === 'Age'">
+      <app-age></app-age>
+    </div>
+    <div *ngIf="folder === 'University'">
+      <app-university></app-university>
+    </div>
+    <div *ngIf="folder === 'Weather'">
+      <app-weather></app-weather>
+    </div>
+    <div *ngIf="folder === 'About'">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Contratame</ion-card-subtitle>
+          <ion-card-title>Josue Pujols - Software Engineer</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <img class="Myimg" src="../../assets/myself.jpeg" alt="My self" width="300px" height="300px" style="border-radius: 999px; margin-bottom: 30px;">
+          <ion-card-subtitle>Correo: josuepujols20@icloud.com</ion-card-subtitle>
+          <ion-card-subtitle>Telefono: 829-381-1528</ion-card-subtitle>
+        </ion-card-content>
+      </ion-card>
+
+    </div>
   </div>
 </ion-content>
